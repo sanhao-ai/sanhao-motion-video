@@ -1,0 +1,27 @@
+【sanhao-motion-video 安装说明】
+
+这是什么：
+  三好口播动效视频制作 Skill——把口播稿变成 3:4 竖屏(1080×1440)动效知识分享视频。
+  含完整六步流程：配音生成 → 三好PPT视觉合成 → 质检门禁 → 渲染 → 验片交付，
+  附配音参数配方、视觉色板、动效库和 7 条实战踩坑速查表。
+
+安装方法（各智能体平台通用，Agent Skills 开放格式）：
+  1. 克隆本仓库，把 sanhao-motion-video/ 文件夹放入对应平台技能目录：
+     - QwenWork/千问办公: ~/.qwenworkcn/skills/
+     - Claude Code:       ~/.claude/skills/
+     - Codex CLI:         ~/.codex/skills/
+     - 其他支持 Agent Skills 标准的平台同理
+  2. 重启智能体会话使技能加载。
+
+环境依赖（首次使用前按需安装）：
+  - Node.js >= 22 + FFmpeg（brew install ffmpeg）
+  - HyperFrames CLI: npx hyperframes init <项目名> 首跑自动就绪
+  - 中文配音三选一：
+    a) edge-tts（pip install edge-tts，微软免费，注意限流：段间隔≥2秒）
+    b) 本地 Kokoro（npx hyperframes tts -v zf_xiaobei，首次自动下载模型）
+    c) Azure 语音服务免费层（同款声音官方通道，月50万字符）
+  - GSAP 已随模板本地化，无需额外安装
+
+触发词：做动效视频 / 知识分享视频 / 把口播稿做成视频 / 视频工作流
+
+版本 1.0.0 | 作者 三好（sanhao-ai）| MIT
